@@ -21,8 +21,10 @@
     transition: 1s;
 }
 
-.card-product:hover{
+@media (min-width: 768px) {
+  .card-product:hover {
     transform: scale(1.1);
+  }
 }
 
 .my-comparison-card{
