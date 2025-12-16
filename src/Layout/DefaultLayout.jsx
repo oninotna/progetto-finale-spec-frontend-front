@@ -18,7 +18,7 @@ export default function DefaultLayout () {
                 // height: '70px'
             }}>
                 <div className="container-fluid">
-                    <h1 className='text-light' onClick={() => navigate('/')} style={{cursor: 'pointer'}}>BoolBikes</h1>
+                    <h1 className='text-light' onClick={() => navigate('/')} style={{cursor: 'pointer'}}>BikeShowRoom</h1>
                     <button 
                         className="navbar-toggler m-2" 
                         type="button" 
@@ -45,7 +45,7 @@ export default function DefaultLayout () {
             </main>
 
             <footer className='mt-auto py-3 bg-secondary' style={{backgroundColor: 'lightgray'}}>
-                <p className='text-center text-light fst-italic pt-2'>Powered by, Antonino Musarra Tubbi, classe 144</p>
+                <p className='text-center text-light fst-italic pt-2'>Powered by, Antonino Musarra Tubbi</p>
             </footer>
         </div>
     );

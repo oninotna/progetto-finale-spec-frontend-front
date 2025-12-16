@@ -49,7 +49,7 @@ export default function HomePage () {
         <div className='hero' style={{marginTop: '20px'}}>
             <div className='hero-opacity d-flex flex-column justify-content-center align-items-center'>
                 <div>
-                    <h2 className='text-center fs-1 rounded-3 text-light'>Benvenuto su BoolBikes</h2>
+                    <h2 className='text-center fs-1 rounded-3 text-light'>Benvenuto su BikeShowRoom</h2>
                     <p className='text-center fs-6 rounded-3 p-2 text-light'>
                     Scopri la nostra selezione di biciclette
                     </p> 
