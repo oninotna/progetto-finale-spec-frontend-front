@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
 export default function ComparisonPage () {
-    const { bikeIds, getBikes, addIds } = useBikesContext();
+    const { bikeIds, setBikeIds, getBikes, addIds } = useBikesContext();
     const [dataBikes, setDataBikes] = useState([]);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
     const navigate = useNavigate();
@@ -22,7 +22,6 @@ export default function ComparisonPage () {
         function dataRecovery () {
             getBikes(bikeIds)
             .then(res => {
-                console.log(res);
                 setDataBikes(res);
             })
             .catch(err => console.error(err)); 

@@ -29,7 +29,7 @@ export default function HomePage () {
         }else if(orderData === 'titZ-A'){
             filteredBikes = [...bikes].sort((a,b) => b.title.localeCompare(a.title));
         }else if(orderData === 'catA-Z'){
-            bikefilteredBikessData = [...bikes].sort((a,b) => a.category.localeCompare(b.category));
+            filteredBikes = [...bikes].sort((a,b) => a.category.localeCompare(b.category));
         }
         else if(orderData === 'catZ-A'){
             filteredBikes = [...bikes].sort((a,b) => b.category.localeCompare(a.category));
@@ -50,13 +50,13 @@ export default function HomePage () {
             <div className='hero-opacity d-flex flex-column justify-content-center align-items-center'>
                 <div>
                     <h2 className='text-center fs-1 rounded-3 text-light'>Benvenuto su BoolBikes</h2>
-                    <p className='text-center fs-5 rounded-3 p-2 text-light'>
+                    <p className='text-center fs-6 rounded-3 p-2 text-light'>
                     Scopri la nostra selezione di biciclette
                     </p> 
                 </div>
             </div>  
         </div>
-        <div className='container px-3'>
+        <div className='container px-3' style={{minHeight: '800px'}}>
             <div className=' px-4 py-1'>
                 <button className='btn btn-secondary mt-3' 
                     onClick={() => setFilterSection(!filterSection)}
@@ -109,7 +109,7 @@ export default function HomePage () {
                 <h1 className='text-center mt-2 rounded-3 text-secondary'>🚴🏻‍♂️ Le nostre bici 🚴🏻‍♂️</h1>
 
             </div>
-            <div className='row my-3 gap-3 justify-content-center'>
+            <div className='row my-3 justify-content-center'>
                 {
                 bikesData.length ? 
                 bikesData.map(bike => <CardProduct data={bike} bikeIds={bikeIds} addIds={addIds} key={bike.id} />) 

@@ -18,7 +18,7 @@ export default function DefaultLayout () {
                 // height: '70px'
             }}>
                 <div className="container-fluid">
-                    <h1 className='text-light' onClick={() => navigate('/')}>BoolBikes</h1>
+                    <h1 className='text-light' onClick={() => navigate('/')} style={{cursor: 'pointer'}}>BoolBikes</h1>
                     <button 
                         className="navbar-toggler m-2" 
                         type="button" 

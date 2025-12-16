@@ -13,7 +13,6 @@ export default function () {
         function dataRecovery () {
             getBikes(wishlistIds)
             .then(res => {
-                console.log(res);
                 setDataBikes(res);
             })
             .catch(err => console.error(err)); 

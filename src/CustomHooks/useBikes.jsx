@@ -21,16 +21,6 @@ export default function useBikes() {
   useEffect(() => {
     let url;
 
-    // if (query && categoryFilter) {
-    //   url = `${apiUrl}?search=${query}&category=${categoryFilter}`;
-    // } else if (query) {
-    //   url = `${apiUrl}?search=${query}`;
-    // } else if (categoryFilter) {
-    //   url = `${apiUrl}?category=${categoryFilter}`;
-    // } else {
-    //   url = apiUrl;
-    // }
-
     url = apiUrl;
 
     if (query) {
@@ -39,8 +29,6 @@ export default function useBikes() {
     if (categoryFilter) {
       url += `${query ? '&' : '?'}category=${categoryFilter}`;
     }
-
-    
 
     axios.get(`${url}`).then((res) => setBikes(res.data));
   }, [query, categoryFilter]);
@@ -64,8 +52,6 @@ export default function useBikes() {
 
   async function getBikes(bikeIds) {
     try {
-      //if(!bikeIds.length) throw new Error('Errore col recupero dei dati');
-
       if (
         bikeIds === null ||
         bikeIds === undefined ||
@@ -83,8 +69,6 @@ export default function useBikes() {
       return bikes;
     } catch (err) {
       throw new Error("Errore col recupero dei dati: " + err.message);
-      //console.error(err);
-      //return [];
     }
   }
 
@@ -105,6 +89,7 @@ export default function useBikes() {
     setQuery,
     setCategoryFilter,
     bikeIds,
+    setBikeIds,
     addIds,
     getBikes,
     wishlistIds,
